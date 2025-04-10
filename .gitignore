@@ -1,0 +1,6 @@
+pretrained_models/
+bert/chinese_news_classifier/
+bert/english_news_classifier/
+transformer-rnn/chinese_news_classifier/
+transformer-rnn/english_news_classifier/
+*.xlsx

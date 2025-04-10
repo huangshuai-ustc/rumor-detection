@@ -1,0 +1,14 @@
+learning_rate=2e-05,num_train_epochs=3,optim=adamw_torch,seed=42,weight_decay=0.01,
+Accuracy: 0.9194, Precision: 0.9923, Recall: 0.8521, F1: 0.9169
+Accuracy: 0.9781, Precision: 0.9932, Recall: 0.9647, F1: 0.9787
+Accuracy: 0.9965, Precision: 1.0000, Recall: 0.9934, F1: 0.9967
+learning_rate=3e-05,num_train_epochs=3,optim=adamw_torch,seed=42,weight_decay=0.01,
+Accuracy: 0.9574, Precision: 0.9664, Recall: 0.9514, F1: 0.9588
+Accuracy: 0.9954, Precision: 0.9956, Recall: 0.9956, F1: 0.9956
+Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+Accuracy: 0.9654, Precision: 0.9793, Recall: 0.9530, F1: 0.9660
+Accuracy: 0.9839, Precision: 0.9865, Recall: 0.9821, F1: 0.9843
+Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1: 1.0000
+Accuracy: 0.9619, Precision: 0.9661, Recall: 0.9596, F1: 0.9628
+Accuracy: 0.9873, Precision: 0.9910, Recall: 0.9843, F1: 0.9876
+Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1: 1.0000

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新闻置信度检测</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <div class="language-select" style="margin-bottom: 20px;">
+                <label>
+                    <input type="radio" name="language" value="zh" {% if language == 'zh' %}checked{% endif %}>
+                    中文
+                </label>
+                <label>
+                    <input type="radio" name="language" value="en" {% if language == 'en' %}checked{% endif %}>
+                    English
+                </label>
+            </div>
+
+
+            <div class="text-input">
+                <textarea name="text" rows="10" placeholder="请粘贴您的文本内容...">{{ request.form.text if request.form.text }}</textarea>
+                <button type="submit" class="detect-btn">检测</button>
+            </div>
+
+            {% if results %}
+            <div class="results">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%">序号</th>
+                            <th style="width: 50%">文本</th>
+                            <th style="width: 10%">BERT模型置信度</th>
+                            <th style="width: 10%">BERT模型结果</th>
+                            <th style="width: 10%">混合模型置信度</th>
+                            <th style="width: 10%">混合模型结果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in results %}
+                        <tr>
+                            <td>{{ item.index }}</td>
+                            <td>{{ item.text }}</td>
+                            <td>{{ item.confidence1 }}</td>
+                            <td class="result-{{ 'pass' if item.result1 == '真新闻' else 'fail' }}">{{ item.result1 }}</td>
+                            <td>{{ item.confidence2 }}</td>
+                            <td class="result-{{ 'pass' if item.result2 == '真新闻' else 'fail' }}">{{ item.result2 }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

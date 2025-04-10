@@ -1,0 +1,21 @@
+Epoch 1:
+Validation Loss: 0.2830
+Accuracy: 0.8823
+Precision: 0.9097
+Recall: 0.8515
+F1: 0.8796
+
+Epoch 2:
+Validation Loss: 0.3042
+Accuracy: 0.8753
+Precision: 0.9688
+Recall: 0.7783
+F1: 0.8632
+
+Epoch 3:
+Validation Loss: 0.2780
+Accuracy: 0.8921
+Precision: 0.9211
+Recall: 0.8600
+F1: 0.8895
+
